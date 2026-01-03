@@ -1,9 +1,27 @@
 ---
-const stats = [
-  { value: "—", label: "Youth supported" },
-  { value: "—", label: "Counties served" },
-  { value: "—", label: "Community partners" },
-  { value: "—", label: "Resources delivered" },
+const programs = [
+  {
+    title: "Resource Navigation",
+    description:
+      "Direct support connecting youth to housing, education, health, legal, and financial resources tailored to their immediate and long-term needs.",
+  },
+  {
+    title: "Mentorship & Guidance",
+    description:
+      "Consistent, relationship-based mentorship that supports goal setting, decision-making, and personal development during key life transitions.",
+  },
+  {
+    title: "Stability & Transition Support",
+    description:
+      "Practical assistance for youth exiting or navigating systems of care, focused on continuity, planning, and long-term independence.",
+  },
+];
+
+const impactAreas = [
+  "Housing stability",
+  "Educational access and persistence",
+  "Health and wellness support",
+  "Employment and economic mobility",
 ];
 ---
 
@@ -11,30 +29,34 @@ const stats = [
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>FORM</title>
+    <title>FORM — Foundation • Opportunity • Resources • Mentorship</title>
+    <meta
+      name="description"
+      content="FORM advances stability and long-term outcomes for foster and system-impacted youth through coordinated resources, mentorship, and community partnerships."
+    />
   </head>
 
   <body class="bg-white text-slate-900">
-    <!-- NAV -->
+    <!-- NAVIGATION -->
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
       <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
         <div>
           <div class="text-2xl font-semibold tracking-tight">FORM</div>
           <div class="text-xs tracking-wide uppercase text-slate-600">
-            Acronym coming soon
+            Foundation • Opportunity • Resources • Mentorship
           </div>
         </div>
 
         <nav class="hidden md:flex gap-6 text-sm">
           <a href="#about" class="hover:underline">About</a>
           <a href="#programs" class="hover:underline">What We Do</a>
-          <a href="#impact" class="hover:underline">Impact</a>
+          <a href="#impact" class="hover:underline">Our Impact</a>
           <a href="#get-involved" class="hover:underline">Get Involved</a>
         </nav>
 
         <a
           href="#donate"
-          class="px-4 py-2 rounded bg-slate-900 text-white text-sm"
+          class="px-4 py-2 rounded bg-slate-900 text-white text-sm hover:opacity-90"
         >
           Donate
         </a>
@@ -43,53 +65,141 @@ const stats = [
 
     <!-- HERO -->
     <section class="border-b border-slate-200">
-      <div class="max-w-6xl mx-auto px-5 py-16 grid md:grid-cols-2 gap-10">
+      <div class="max-w-6xl mx-auto px-5 py-20 grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h1 class="text-4xl md:text-5xl font-semibold">
-            Building stability so youth can shape their future.
-          </h1>
-          <p class="mt-5 text-lg text-slate-700">
-            FORM supports foster and system-impacted youth across California
-            through resources, mentorship, and long-term guidance.
+          <p class="text-sm font-medium text-slate-600">
+            Supporting foster and system-impacted youth across California
           </p>
 
-          <div class="mt-7 flex gap-3 flex-wrap">
-            <a href="#donate" class="px-5 py-3 bg-slate-900 text-white rounded">
+          <h1 class="mt-4 text-4xl md:text-5xl font-semibold leading-tight">
+            Build the foundation. Claim the future.
+          </h1>
+
+          <p class="mt-6 text-lg text-slate-700 max-w-xl">
+            FORM advances stability and long-term outcomes for foster and
+            system-impacted youth by connecting them to coordinated resources,
+            mentorship, and community partnerships.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a
+              href="#donate"
+              class="px-6 py-3 bg-slate-900 text-white rounded text-sm"
+            >
               Donate
             </a>
             <a
-              href="#get-help"
-              class="px-5 py-3 border border-slate-300 rounded"
+              href="#get-support"
+              class="px-6 py-3 border border-slate-300 rounded text-sm"
             >
-              Find Support
+              Get Support
+            </a>
+            <a
+              href="#get-involved"
+              class="px-6 py-3 border border-slate-300 rounded text-sm"
+            >
+              Partner With Us
             </a>
           </div>
         </div>
 
-        <div class="bg-slate-100 rounded-xl flex items-center justify-center">
-          Hero image / video
+        <div
+          class="bg-slate-100 rounded-2xl h-80 md:h-96 flex items-center justify-center text-slate-500"
+        >
+          Hero image or short video
         </div>
       </div>
     </section>
 
-    <!-- STATS -->
-    <section id="impact" class="py-12">
-      <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-4 gap-6">
-        {stats.map((s) => (
-          <div class="border border-slate-200 rounded-xl p-6">
-            <div class="text-3xl font-semibold">{s.value}</div>
-            <div class="text-sm text-slate-600">{s.label}</div>
-          </div>
-        ))}
+    <!-- ABOUT -->
+    <section id="about" class="py-20">
+      <div class="max-w-4xl mx-auto px-5">
+        <h2 class="text-3xl font-semibold">About FORM</h2>
+        <p class="mt-5 text-lg text-slate-700">
+          FORM is a California-based nonprofit dedicated to advancing stability
+          and opportunity for foster and system-impacted youth. We work at the
+          intersection of direct support and systems navigation, helping young
+          people access essential resources while building the foundation needed
+          for long-term independence.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROGRAMS -->
+    <section id="programs" class="py-20 border-t border-slate-200 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-5">
+        <h2 class="text-3xl font-semibold">What We Do</h2>
+        <p class="mt-4 text-slate-700 max-w-2xl">
+          FORM delivers coordinated, youth-centered support designed to reduce
+          barriers and improve outcomes during critical life transitions.
+        </p>
+
+        <div class="mt-10 grid md:grid-cols-3 gap-6">
+          {programs.map((program) => (
+            <div class="bg-white border border-slate-200 rounded-2xl p-6">
+              <h3 class="text-xl font-semibold">{program.title}</h3>
+              <p class="mt-3 text-slate-700">{program.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section id="impact" class="py-20">
+      <div class="max-w-6xl mx-auto px-5">
+        <h2 class="text-3xl font-semibold">Our Impact Focus</h2>
+        <p class="mt-4 text-slate-700 max-w-2xl">
+          Our work is guided by measurable outcomes that support stability,
+          continuity, and long-term success.
+        </p>
+
+        <ul class="mt-8 grid md:grid-cols-2 gap-4">
+          {impactAreas.map((area) => (
+            <li class="border border-slate-200 rounded-xl p-5 text-slate-700">
+              {area}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <!-- GET INVOLVED -->
+    <section
+      id="get-involved"
+      class="py-20 border-t border-slate-200 bg-slate-900 text-white"
+    >
+      <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-10">
+        <div>
+          <h2 class="text-3xl font-semibold">Get Involved</h2>
+          <p class="mt-4 text-slate-300">
+            FORM partners with individuals, organizations, and institutions who
+            are committed to advancing opportunity and stability for youth.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <a
+            href="#donate"
+            class="px-6 py-3 bg-white text-slate-900 rounded text-sm font-medium"
+          >
+            Make a Donation
+          </a>
+          <a
+            href="#volunteer"
+            class="px-6 py-3 border border-slate-500 rounded text-sm"
+          >
+            Volunteer or Partner
+          </a>
+        </div>
       </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="border-t border-slate-200 py-10">
+    <footer class="py-10 border-t border-slate-200">
       <div class="max-w-6xl mx-auto px-5 text-sm text-slate-600">
-        © {new Date().getFullYear()} FORM • California
+        © {new Date().getFullYear()} FORM — Foundation • Opportunity • Resources • Mentorship
       </div>
     </footer>
   </body>
 </html>
-
