@@ -4,7 +4,6 @@
      height="170"
      role="img"
      aria-label="FORM — Foundation Opportunity Resources Mentorship">
-
   <defs>
     <style>
       .form-word {
@@ -22,13 +21,6 @@
     </style>
   </defs>
 
-  <!-- Main wordmark -->
-  <text x="0" y="125" class="form-word" fill="#0B1F3B">
-    FORM
-  </text>
-
-  <!-- Tagline -->
-  <text x="4" y="160" class="form-tag" fill="#F36A21">
-    FOUNDATION • OPPORTUNITY • RESOURCES • MENTORSHIP
-  </text>
+  <text x="0" y="125" class="form-word" fill="#0B1F3B">FORM</text>
+  <text x="4" y="160" class="form-tag" fill="#F36A21">FOUNDATION • OPPORTUNITY • RESOURCES • MENTORSHIP</text>
 </svg>
