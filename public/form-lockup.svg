@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="150" viewBox="0 0 560 150" role="img" aria-label="FORM — Foundation Opportunity Resources Mentorship">
+  <defs>
+    <style>
+      .word { font: 800 74px/1 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; letter-spacing: -1px; }
+      .tag  { font: 700 16px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; letter-spacing: 2.4px; }
+    </style>
+  </defs>
+
+  <text x="0" y="86" class="word" fill="#0B1F3B">FORM</text>
+  <text x="0" y="126" class="tag" fill="#F36A21">
+    FOUNDATION • OPPORTUNITY • RESOURCES • MENTORSHIP
+  </text>
+</svg>
