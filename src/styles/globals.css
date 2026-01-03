@@ -1,69 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* =========================================
    FORM BRAND THEME (Dark Blue + Orange)
+   Tailwind v4-safe (no @apply)
    ========================================= */
 :root {
   --form-navy: #0B1F3B;
   --form-orange: #F36A21;
 }
 
-/* =========================================
-   BASE TYPOGRAPHY
-   ========================================= */
-@layer base {
-  html { scroll-behavior: smooth; }
-  body { @apply bg-white text-slate-800 antialiased; }
-
-  h1, h2, h3, h4 {
-    @apply font-extrabold tracking-tight text-[color:var(--form-navy)];
-  }
-
-  a { @apply underline-offset-4 transition-colors duration-150; }
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-/* =========================================
-   COMPONENTS
-   ========================================= */
-@layer components {
-  /* Responsive section rhythm */
-  .section {
-    @apply py-14 sm:py-16 md:py-20 lg:py-24;
-  }
+/* Base typography */
+body {
+  background: #ffffff;
+  color: #1f2937; /* slate-800 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  /* Hero vertical padding: tighter on mobile, larger on desktop */
-  .hero-pad {
-    @apply py-14 sm:py-16 md:py-20 lg:py-24;
-  }
+/* Make headings feel UW-bold by default */
+h1, h2, h3, h4 {
+  color: var(--form-navy);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
 
-  /* Buttons */
-  .btn-primary {
-    @apply inline-flex items-center justify-center
-           px-6 py-3 rounded-full
-           bg-[color:var(--form-orange)] text-white
-           font-semibold no-underline
-           hover:opacity-90 transition;
-  }
-
-  .btn-secondary {
-    @apply inline-flex items-center justify-center
-           px-6 py-3 rounded-full
-           border border-slate-300
-           text-[color:var(--form-navy)]
-           font-semibold no-underline
-           hover:bg-slate-50 transition;
-  }
-
-  .btn-secondary--on-dark {
-    @apply border-white/40 text-white hover:bg-white/10;
-  }
-
-  /* Cards */
-  .card {
-    @apply bg-white border border-slate-200
-           rounded-3xl p-6 shadow-sm
-           hover:shadow transition;
-  }
+/* Links: keep them clean (you already do no-underline in markup often) */
+a {
+  text-underline-offset: 4px;
 }
