@@ -1,8 +1,5 @@
 @import "tailwindcss";
 
-/* Free “Futura-like” fonts */
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700;800&family=Montserrat:wght@500;600;700;800&display=swap");
-
 /* BRAND TOKENS */
 :root {
   --form-navy: #0B1F3B;
@@ -15,13 +12,16 @@ body {
   margin: 0;
   background: #ffffff;
   color: var(--form-navy);
+
+  /* Fonts are loaded via <head> in SiteLayout.astro */
   font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   font-weight: 600;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Headings + strong UI text = Spartan (Futura-ish) */
+/* Headings + strong UI text */
 h1, h2, h3, h4,
 .nav-bold {
   font-family: "League Spartan", "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -30,7 +30,7 @@ h1, h2, h3, h4,
   color: var(--form-navy);
 }
 
-/* Simple reusable button classes (NO @apply, Tailwind v4-safe) */
+/* Buttons (no @apply; Tailwind v4-safe) */
 .btn-primary {
   background: var(--form-orange);
   color: #fff;
