@@ -31,7 +31,7 @@ const stories = [
 ---
 
 <SiteLayout title="FORM — Foundation • Opportunity • Resources • Mentorship">
-  <!-- Sticky top utility bar (UW vibe) -->
+  <!-- Utility bar -->
   <div class="bg-[color:var(--form-navy)] text-white">
     <div class="max-w-6xl mx-auto px-5 py-2 text-xs flex items-center justify-between">
       <div class="opacity-90">Serving foster and system-impacted youth across California</div>
@@ -45,19 +45,6 @@ const stories = [
   <!-- NAV -->
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
-      <!-- Option A: text lockup (keep) -->
-      <!--
-      <a href="#top" class="no-underline">
-        <div class="leading-tight">
-          <div class="text-2xl font-extrabold tracking-tight text-[color:var(--form-navy)]">FORM</div>
-          <div class="text-[11px] tracking-wide uppercase text-slate-600">
-            Foundation • Opportunity • Resources • Mentorship
-          </div>
-        </div>
-      </a>
-      -->
-
-      <!-- Option B: SVG lockup (recommended) -->
       <a href="#top" class="no-underline">
         <img
           src="/form-lockup.svg"
@@ -77,37 +64,37 @@ const stories = [
       <div class="flex items-center gap-3">
         <a
           href="#get-involved"
-          class="hidden sm:inline-flex no-underline px-4 py-2 rounded-full border border-slate-300 text-sm font-medium hover:bg-slate-50"
+          class="hidden sm:inline-flex no-underline px-4 py-2 rounded-full border border-slate-300 text-sm font-medium hover:bg-slate-50 transition"
         >
           Volunteer
         </a>
-        <a href="#donate" class="btn-primary px-4 py-2 text-sm">
+
+        <a
+          href="#donate"
+          class="no-underline inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold text-white
+                 bg-[color:var(--form-orange)] hover:opacity-90 transition"
+        >
           Donate
         </a>
       </div>
     </div>
   </header>
 
-  <!-- HERO (FULL-WIDTH IMAGE BEHIND TEXT) -->
+  <!-- HERO (full-width image behind text) -->
   <section id="top" class="relative overflow-hidden">
-    <!-- Background image layer -->
     <div class="absolute inset-0">
-      <!-- Put your image at /public/hero.jpg (or change the src below) -->
       <img
         src="/hero.jpg"
         alt="FORM supporting foster and system-impacted youth in California"
         class="h-full w-full object-cover"
         loading="eager"
       />
-      <!-- Dark overlay for readability -->
       <div class="absolute inset-0 bg-[color:var(--form-navy)]/70"></div>
-      <!-- Soft gradient for polish -->
       <div class="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/35"></div>
     </div>
 
-    <!-- Content -->
     <div class="relative">
-      <div class="max-w-6xl mx-auto px-5 hero-pad">
+      <div class="max-w-6xl mx-auto px-5 py-14 sm:py-16 md:py-20 lg:py-24">
         <div class="max-w-2xl">
           <p class="text-sm font-semibold text-[color:var(--form-orange)]">
             FORM • California
@@ -123,13 +110,27 @@ const stories = [
           </p>
 
           <div class="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <a href="#donate" class="btn-primary">
+            <a
+              href="#donate"
+              class="no-underline inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold text-white
+                     bg-[color:var(--form-orange)] hover:opacity-90 transition"
+            >
               Donate
             </a>
-            <a href="#get-support" class="btn-secondary btn-secondary--on-dark">
+
+            <a
+              href="#get-support"
+              class="no-underline inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold text-white
+                     border border-white/40 hover:bg-white/10 transition"
+            >
               Get Support
             </a>
-            <a href="#get-involved" class="btn-secondary btn-secondary--on-dark">
+
+            <a
+              href="#get-involved"
+              class="no-underline inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold text-white
+                     border border-white/40 hover:bg-white/10 transition"
+            >
               Partner With Us
             </a>
           </div>
@@ -140,7 +141,7 @@ const stories = [
         </div>
       </div>
 
-      <!-- Impact strip (under hero) -->
+      <!-- Impact strip -->
       <div class="bg-white border-t border-slate-200">
         <div class="max-w-6xl mx-auto px-5 py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((s) => (
@@ -155,7 +156,7 @@ const stories = [
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="section">
+  <section id="about" class="py-14 sm:py-16 md:py-20 lg:py-24">
     <div class="max-w-4xl mx-auto px-5">
       <h2 class="text-3xl md:text-4xl font-extrabold text-[color:var(--form-navy)]">About FORM</h2>
       <p class="mt-5 text-lg text-slate-700">
@@ -167,7 +168,7 @@ const stories = [
   </section>
 
   <!-- PROGRAMS -->
-  <section id="programs" class="section bg-slate-50 border-t border-slate-200">
+  <section id="programs" class="py-14 sm:py-16 md:py-20 lg:py-24 bg-slate-50 border-t border-slate-200">
     <div class="max-w-6xl mx-auto px-5">
       <div class="flex items-end justify-between gap-6 flex-wrap">
         <div>
@@ -178,7 +179,7 @@ const stories = [
         </div>
         <a
           href="#get-involved"
-          class="no-underline inline-flex px-4 py-2 rounded-full border border-slate-300 font-semibold text-[color:var(--form-navy)] hover:bg-white"
+          class="no-underline inline-flex px-4 py-2 rounded-full border border-slate-300 font-semibold text-[color:var(--form-navy)] hover:bg-white transition"
         >
           Explore ways to help
         </a>
@@ -186,11 +187,14 @@ const stories = [
 
       <div class="mt-10 grid md:grid-cols-3 gap-6">
         {programs.map((p) => (
-          <div class="card p-7">
+          <div class="bg-white border border-slate-200 rounded-3xl p-7 shadow-sm hover:shadow transition">
             <div class="h-10 w-10 rounded-xl bg-[color:var(--form-orange)]/15 mb-4"></div>
             <h3 class="text-xl font-extrabold text-[color:var(--form-navy)]">{p.title}</h3>
             <p class="mt-3 text-slate-700">{p.desc}</p>
-            <a href="#get-involved" class="mt-5 inline-flex font-semibold text-[color:var(--form-orange)] no-underline hover:underline">
+            <a
+              href="#get-involved"
+              class="mt-5 inline-flex font-semibold text-[color:var(--form-orange)] no-underline hover:underline"
+            >
               Learn more
             </a>
           </div>
@@ -200,7 +204,7 @@ const stories = [
   </section>
 
   <!-- IMPACT -->
-  <section id="impact" class="section">
+  <section id="impact" class="py-14 sm:py-16 md:py-20 lg:py-24">
     <div class="max-w-6xl mx-auto px-5 grid lg:grid-cols-12 gap-10 items-start">
       <div class="lg:col-span-7">
         <h2 class="text-3xl md:text-4xl font-extrabold text-[color:var(--form-navy)]">Our Impact Focus</h2>
@@ -236,7 +240,7 @@ const stories = [
           </p>
           <a
             href="#get-involved"
-            class="mt-6 inline-flex no-underline px-5 py-3 rounded-full bg-white text-[color:var(--form-navy)] font-semibold hover:opacity-90"
+            class="mt-6 inline-flex no-underline px-5 py-3 rounded-full bg-white text-[color:var(--form-navy)] font-semibold hover:opacity-90 transition"
           >
             Request partner info
           </a>
@@ -246,7 +250,7 @@ const stories = [
   </section>
 
   <!-- STORIES -->
-  <section id="stories" class="section bg-slate-50 border-t border-slate-200">
+  <section id="stories" class="py-14 sm:py-16 md:py-20 lg:py-24 bg-slate-50 border-t border-slate-200">
     <div class="max-w-6xl mx-auto px-5">
       <h2 class="text-3xl md:text-4xl font-extrabold text-[color:var(--form-navy)]">Stories & Updates</h2>
       <p class="mt-3 text-slate-700 max-w-2xl">
@@ -255,7 +259,7 @@ const stories = [
 
       <div class="mt-10 grid md:grid-cols-3 gap-6">
         {stories.map((s) => (
-          <div class="card p-7">
+          <div class="bg-white border border-slate-200 rounded-3xl p-7 shadow-sm hover:shadow transition">
             <div class="text-xs font-extrabold tracking-wide text-[color:var(--form-orange)] uppercase">{s.tag}</div>
             <div class="mt-2 text-lg font-extrabold text-[color:var(--form-navy)]">{s.title}</div>
             <p class="mt-3 text-slate-700">{s.desc}</p>
@@ -269,7 +273,7 @@ const stories = [
   </section>
 
   <!-- GET SUPPORT -->
-  <section id="get-support" class="section">
+  <section id="get-support" class="py-14 sm:py-16 md:py-20 lg:py-24">
     <div class="max-w-6xl mx-auto px-5">
       <div class="rounded-3xl border border-slate-200 bg-white p-8 md:p-10 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-6">
         <div>
@@ -278,7 +282,11 @@ const stories = [
             If you’re foster or system-impacted and looking for resources, start here. We’ll help you identify options and next steps.
           </p>
         </div>
-        <a href="#contact" class="btn-primary">
+        <a
+          href="#contact"
+          class="no-underline inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold text-white
+                 bg-[color:var(--form-orange)] hover:opacity-90 transition"
+        >
           Get Support
         </a>
       </div>
@@ -286,22 +294,29 @@ const stories = [
   </section>
 
   <!-- GET INVOLVED -->
-  <section id="get-involved" class="section bg-[color:var(--form-navy)] text-white">
+  <section id="get-involved" class="py-14 sm:py-16 md:py-20 lg:py-24 bg-[color:var(--form-navy)] text-white">
     <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-10 items-center">
       <div>
-        <h2 class="text-3xl md:text-4xl font-extrabold">Get Involved</h2>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white">Get Involved</h2>
         <p class="mt-4 text-white/80 max-w-xl">
           FORM partners with individuals, organizations, and institutions committed to advancing opportunity and stability for youth.
         </p>
       </div>
 
       <div class="flex flex-col sm:flex-row gap-3 sm:justify-end">
-        <a id="donate" href="#donate" class="btn-primary">
+        <a
+          id="donate"
+          href="#donate"
+          class="no-underline inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold text-white
+                 bg-[color:var(--form-orange)] hover:opacity-90 transition"
+        >
           Make a Donation
         </a>
+
         <a
           href="#contact"
-          class="btn-secondary btn-secondary--on-dark"
+          class="no-underline inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold text-white
+                 border border-white/40 hover:bg-white/10 transition"
         >
           Volunteer / Partner
         </a>
