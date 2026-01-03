@@ -1,25 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="920" height="220" viewBox="0 0 920 220" role="img" aria-label="FORM — Foundation Opportunity Resources Mentorship">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="900"
+     height="260"
+     viewBox="0 0 900 260"
+     role="img"
+     aria-label="FORM — Foundation Opportunity Resources Mentorship">
+
   <defs>
     <style>
-      /* Prefer Futura; fallbacks keep the look bold + geometric */
-      .word {
+      .form-word {
         font-family: Futura, "Futura PT", "Futura Std", Avenir, Montserrat, Arial, sans-serif;
         font-weight: 800;
-        font-size: 120px;
-        letter-spacing: -1px;
+        font-size: 150px;
+        letter-spacing: -2px;
       }
-      .tag {
+      .form-tag {
         font-family: Futura, "Futura PT", "Futura Std", Avenir, Montserrat, Arial, sans-serif;
         font-weight: 800;
-        font-size: 22px;
-        letter-spacing: 3px;
+        font-size: 26px;
+        letter-spacing: 3.5px;
       }
     </style>
   </defs>
 
-  <text x="0" y="135" class="word" fill="#0B1F3B">FORM</text>
+  <!-- Main wordmark -->
+  <text x="0" y="160" class="form-word" fill="#0B1F3B">
+    FORM
+  </text>
 
-  <text x="0" y="185" class="tag" fill="#F36A21">
+  <!-- Tagline / acronym expansion -->
+  <text x="4" y="220" class="form-tag" fill="#F36A21">
     FOUNDATION • OPPORTUNITY • RESOURCES • MENTORSHIP
   </text>
 </svg>
