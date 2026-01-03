@@ -1,29 +1,75 @@
 @import "tailwindcss";
 
+/* BRAND TOKENS */
 :root {
   --form-navy: #0B1F3B;
   --form-orange: #F36A21;
 }
 
-html { scroll-behavior: smooth; }
+/* TYPOGRAPHY RESET */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  background: #ffffff;
-  color: #1f2937;
+  margin: 0;
+  background-color: #ffffff;
+  color: var(--form-navy);
+
+  /* FORCE FUTURA STYLE */
+  font-family: "Futura PT", Futura, Avenir, Montserrat, Arial, sans-serif;
+  font-weight: 700;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /* Prefer Futura everywhere */
-  font-family: Futura, "Futura PT", "Futura Std", Avenir, Montserrat, Arial, sans-serif;
-  font-weight: 600; /* Bold feel across body */
 }
 
-/* Headings */
+/* HEADINGS — VERY BOLD */
 h1, h2, h3, h4 {
-  color: var(--form-navy);
   font-weight: 800;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
+  color: var(--form-navy);
 }
 
-/* Links */
-a { text-underline-offset: 4px; }
+/* BUTTON BASE */
+.btn-primary {
+  background-color: var(--form-orange);
+  color: white;
+  font-weight: 800;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+}
+
+.btn-secondary {
+  font-weight: 800;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--form-navy);
+  color: var(--form-navy);
+}
+
+.btn-secondary--on-dark {
+  border-color: white;
+  color: white;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 1.5rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* HERO SPACING */
+.hero-pad {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .hero-pad {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
