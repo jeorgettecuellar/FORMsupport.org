@@ -1,78 +1,69 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-    --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    --color-primary: #f67280;
-    --color-primary-content: #101828;
-    --color-complementary: #355c7d;
-    --background-image-noise: linear-gradient(
-            to bottom,
-            color-mix(in oklab, var(--color-gray-950) 0%, transparent),
-            color-mix(in oklab, var(--color-gray-950) 100%, transparent)
-        ),
-        url('/images/noise.png');
+/* =========================================
+   FORM BRAND THEME (Dark Blue + Orange)
+   ========================================= */
+:root {
+  --form-navy: #0B1F3B;
+  --form-orange: #F36A21;
 }
 
+/* =========================================
+   BASE TYPOGRAPHY
+   ========================================= */
 @layer base {
-    h1 {
-        @apply text-4xl font-bold tracking-tight sm:text-5xl;
-    }
+  html { scroll-behavior: smooth; }
+  body { @apply bg-white text-slate-800 antialiased; }
 
-    h2 {
-        @apply text-2xl font-bold sm:text-3xl;
-    }
+  h1, h2, h3, h4 {
+    @apply font-extrabold tracking-tight text-[color:var(--form-navy)];
+  }
 
-    a:not(.btn) {
-        @apply underline transition hover:opacity-80;
-    }
-
-    pre {
-        @apply p-6 overflow-x-auto rounded-lg;
-    }
-
-    :not(pre) > code {
-        @apply px-1 py-0.5 font-mono rounded bg-gray-900 text-primary;
-        font-size: 0.9em;
-    }
+  a { @apply underline-offset-4 transition-colors duration-150; }
 }
 
+/* =========================================
+   COMPONENTS
+   ========================================= */
 @layer components {
-    .markdown {
-        > * {
-            @apply my-6;
-        }
+  /* Responsive section rhythm */
+  .section {
+    @apply py-14 sm:py-16 md:py-20 lg:py-24;
+  }
 
-        :where(h1, h2) {
-            @apply mt-12 mb-6;
-        }
+  /* Hero vertical padding: tighter on mobile, larger on desktop */
+  .hero-pad {
+    @apply py-14 sm:py-16 md:py-20 lg:py-24;
+  }
 
-        > :first-child {
-            @apply mt-0;
-        }
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center
+           px-6 py-3 rounded-full
+           bg-[color:var(--form-orange)] text-white
+           font-semibold no-underline
+           hover:opacity-90 transition;
+  }
 
-        > :last-child {
-            @apply mb-0;
-        }
-    }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center
+           px-6 py-3 rounded-full
+           border border-slate-300
+           text-[color:var(--form-navy)]
+           font-semibold no-underline
+           hover:bg-slate-50 transition;
+  }
 
-    .btn {
-        @apply inline-flex items-center justify-center gap-2 bg-primary text-primary-content cursor-pointer text-center font-semibold no-underline transition-colors;
-        padding: var(--btn-py, 0.875rem) var(--btn-px, 1.25rem);
-        font-size: var(--btn-font-size, 0.875rem);
-        border-radius: var(--btn-border-radius, 0.25rem);
+  .btn-secondary--on-dark {
+    @apply border-white/40 text-white hover:bg-white/10;
+  }
 
-        &:hover {
-            @apply bg-primary/85;
-        }
-
-        &:disabled {
-            @apply text-gray-400 bg-gray-700;
-        }
-    }
-
-    .btn-lg {
-        --btn-font-size: 1.125rem;
-        --btn-px: 1.5rem;
-        --btn-py: 1.125rem;
-    }
+  /* Cards */
+  .card {
+    @apply bg-white border border-slate-200
+           rounded-3xl p-6 shadow-sm
+           hover:shadow transition;
+  }
 }
