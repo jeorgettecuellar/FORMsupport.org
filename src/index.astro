@@ -1,1 +1,95 @@
+---
+const stats = [
+  { value: "—", label: "Youth supported" },
+  { value: "—", label: "Counties served" },
+  { value: "—", label: "Community partners" },
+  { value: "—", label: "Resources delivered" },
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FORM</title>
+  </head>
+
+  <body class="bg-white text-slate-900">
+    <!-- NAV -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+        <div>
+          <div class="text-2xl font-semibold tracking-tight">FORM</div>
+          <div class="text-xs tracking-wide uppercase text-slate-600">
+            Acronym coming soon
+          </div>
+        </div>
+
+        <nav class="hidden md:flex gap-6 text-sm">
+          <a href="#about" class="hover:underline">About</a>
+          <a href="#programs" class="hover:underline">What We Do</a>
+          <a href="#impact" class="hover:underline">Impact</a>
+          <a href="#get-involved" class="hover:underline">Get Involved</a>
+        </nav>
+
+        <a
+          href="#donate"
+          class="px-4 py-2 rounded bg-slate-900 text-white text-sm"
+        >
+          Donate
+        </a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-5 py-16 grid md:grid-cols-2 gap-10">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-semibold">
+            Building stability so youth can shape their future.
+          </h1>
+          <p class="mt-5 text-lg text-slate-700">
+            FORM supports foster and system-impacted youth across California
+            through resources, mentorship, and long-term guidance.
+          </p>
+
+          <div class="mt-7 flex gap-3 flex-wrap">
+            <a href="#donate" class="px-5 py-3 bg-slate-900 text-white rounded">
+              Donate
+            </a>
+            <a
+              href="#get-help"
+              class="px-5 py-3 border border-slate-300 rounded"
+            >
+              Find Support
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-slate-100 rounded-xl flex items-center justify-center">
+          Hero image / video
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section id="impact" class="py-12">
+      <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-4 gap-6">
+        {stats.map((s) => (
+          <div class="border border-slate-200 rounded-xl p-6">
+            <div class="text-3xl font-semibold">{s.value}</div>
+            <div class="text-sm text-slate-600">{s.label}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-200 py-10">
+      <div class="max-w-6xl mx-auto px-5 text-sm text-slate-600">
+        © {new Date().getFullYear()} FORM • California
+      </div>
+    </footer>
+  </body>
+</html>
 
