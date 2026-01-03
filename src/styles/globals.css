@@ -12,12 +12,18 @@ body {
   color: #1f2937;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Prefer Futura everywhere */
+  font-family: Futura, "Futura PT", "Futura Std", Avenir, Montserrat, Arial, sans-serif;
+  font-weight: 600; /* Bold feel across body */
 }
 
+/* Headings */
 h1, h2, h3, h4 {
   color: var(--form-navy);
   font-weight: 800;
   letter-spacing: -0.02em;
 }
 
+/* Links */
 a { text-underline-offset: 4px; }
