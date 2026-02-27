@@ -173,36 +173,40 @@ const stories = [
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="py-14 sm:py-16 md:py-20 lg:py-24">
-    <div class="max-w-4xl mx-auto px-5">
-      <h2 class="text-3xl md:text-4xl nav-bold text-[color:var(--form-navy)] uppercase">About FORM</h2>
-      <p class="mt-5 text-lg text-slate-700">
-        FORM is a California-based nonprofit dedicated to advancing stability and opportunity for foster and system-impacted youth.
-        We operate at the intersection of direct support and systems navigation—reducing barriers across housing, education, health,
-        and employment through coordinated resources, mentorship, and partnership.
-      </p>
-    </div>
-  </section>
+<section id="about" class="py-14 sm:py-16 md:py-20 lg:py-24">
+  <div class="max-w-4xl mx-auto px-5">
+    <h2 class="text-3xl md:text-4xl nav-bold text-[color:var(--form-navy)] uppercase">About FORM</h2>
+    <p class="mt-5 text-lg text-slate-700">
+      F.O.R.M connects individuals to trusted, county-specific resources across Los Angeles, Orange, Riverside, and San Bernardino—making it easier to find real support, close to home.
+    </p>
+    <a
+      href="/about"
+      class="mt-6 inline-flex no-underline nav-bold tracking-wide uppercase text-[color:var(--form-orange)] hover:underline"
+    >
+      Learn more about FORM →
+    </a>
+  </div>
+</section>
 
   <!-- PROGRAMS -->
   <section id="programs" class="py-14 sm:py-16 md:py-20 lg:py-24 bg-slate-50 border-t border-slate-200">
     <div class="max-w-6xl mx-auto px-5">
       <div class="flex items-end justify-between gap-6 flex-wrap">
-        <div>
-          <h2 class="text-3xl md:text-4xl nav-bold text-[color:var(--form-navy)] uppercase">What We Do</h2>
-          <p class="mt-3 text-slate-700 max-w-2xl">
-            F.O.R.M compiles and connects individuals to trusted local resources across Los Angeles, Orange, Riverside, and San Bernardino counties. We support foster youth, justice-impacted individuals, those experiencing homelessness, and people in recovery by organizing access to housing, education, employment, mental health, and stability services. Our role is to simplify the search for help—bringing together verified, county-specific support systems so individuals of all ages can more easily find and access the resources they need to move forward.
-          </p>
-        </div>
+  <div>
+    <h2 class="text-3xl md:text-4xl nav-bold text-[color:var(--form-navy)] uppercase">What We Do</h2>
+    <p class="mt-3 text-slate-700 max-w-2xl">
+      We organize access to housing, education, employment, mental health, and stability services—supporting foster youth, justice-impacted individuals, people experiencing homelessness, and those in recovery.
+    </p>
+  </div>
 
-        <a
-          href="#get-involved"
-          class="no-underline inline-flex px-4 py-2 rounded-full border border-slate-300 nav-bold tracking-wide uppercase
-                 text-[color:var(--form-navy)] hover:bg-white transition"
-        >
-          Explore ways to help
-        </a>
-      </div>
+  <a
+    href="/what-we-do"
+    class="no-underline inline-flex px-4 py-2 rounded-full border border-slate-300 nav-bold tracking-wide uppercase
+           text-[color:var(--form-navy)] hover:bg-white transition"
+  >
+    Explore what we do →
+  </a>
+</div>
 
       <div class="mt-10 grid md:grid-cols-3 gap-6">
         {programs.map((p) => (
