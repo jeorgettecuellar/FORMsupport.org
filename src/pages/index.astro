@@ -11,371 +11,148 @@ const stats = [
   { value: "—", label: "Community partners" },
   { value: "—", label: "Resources delivered" },
 ];
-
-const programs = [
-  {
-    title: "Resource Navigation",
-    desc: "We organize verified, county-specific resources so people can find support faster and with more confidence.",
-  },
-  {
-    title: "Trusted Local Network",
-    desc: "We compile providers across LA, Orange, Riverside, and San Bernardino to make services easier to access.",
-  },
-  {
-    title: "Pathways to Stability",
-    desc: "We connect individuals to housing, education, employment, mental health, and recovery support—when it matters most.",
-  },
-];
-
-const stories = [
-  {
-    tag: "Community",
-    title: "Building a network of care",
-    desc: "Partner organizations expand access to housing, education, wellness, and recovery services.",
-  },
-  {
-    tag: "Access",
-    title: "Making support easier to find",
-    desc: "How verified resource navigation helps people move forward faster.",
-  },
-  {
-    tag: "Impact",
-    title: "Turning support into outcomes",
-    desc: "A simple framework for tracking stability and progress over time.",
-  },
-];
 ---
 
 <SiteLayout title="FORM — Foundation • Opportunity • Resources • Mentorship">
-  <!-- Utility bar -->
-  <div class="bg-[color:var(--form-navy)] text-white">
-    <div class="max-w-6xl mx-auto px-5 py-2 text-xs flex items-center justify-between">
-      <div class="opacity-90">
-        Connecting people to verified local support across LA, Orange, Riverside, and San Bernardino
-      </div>
-      <div class="hidden sm:flex gap-4 nav-bold tracking-wide uppercase">
-        <a class="no-underline hover:underline text-white" href={MAIL_SUPPORT}>Get Support</a>
-        <a class="no-underline hover:underline text-white" href={MAIL_PARTNER}>Partner</a>
-      </div>
+
+<!-- Utility bar -->
+<div class="bg-[color:var(--form-navy)] text-white">
+  <div class="max-w-6xl mx-auto px-5 py-2 text-xs flex items-center justify-between">
+    <div class="opacity-90">
+      Connecting people to verified local support across LA, Orange, Riverside, and San Bernardino
+    </div>
+    <div class="hidden sm:flex gap-4 nav-bold tracking-wide uppercase">
+      <a class="no-underline hover:underline text-white" href={MAIL_SUPPORT}>Get Support</a>
+      <a class="no-underline hover:underline text-white" href={MAIL_PARTNER}>Partner</a>
     </div>
   </div>
-
-  <!-- NAV + MOBILE HAMBURGER -->
-  <header class="sticky top-0 z-50 bg-white border-b border-slate-200 min-h-[128px] flex items-center">
-    <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between gap-4">
-      <!-- Logo -->
-      <a href="#top" class="no-underline flex items-center">
-        <img src="/form-lockup.svg" alt="FORM" class="h-24 sm:h-28 md:h-32 w-auto" />
-      </a>
-
-      <!-- Desktop nav -->
-      <nav class="hidden md:flex items-center gap-8 text-sm nav-bold tracking-wide uppercase">
-        <a class="no-underline hover:underline text-[color:var(--form-navy)]" href="#about">About</a>
-        <a class="no-underline hover:underline text-[color:var(--form-navy)]" href="#programs">What We Do</a>
-        <a class="no-underline hover:underline text-[color:var(--form-navy)]" href="#impact">Get Involved</a>
-        <a class="no-underline hover:underline text-[color:var(--form-navy)]" href="#stories">Stories</a>
-      </nav>
-
-      <!-- Desktop CTAs -->
-      <div class="hidden md:flex items-center gap-3">
-        <a href={MAIL_PARTNER} class="btn-secondary">Volunteer</a>
-        <a href="#donate" class="btn-primary">Donate</a>
-      </div>
-
-      <!-- Mobile menu -->
-      <details class="md:hidden relative">
-        <summary
-          class="list-none cursor-pointer select-none rounded-xl border border-slate-200 px-3 py-2
-                 flex items-center gap-2 nav-bold uppercase tracking-wide text-[color:var(--form-navy)]"
-          aria-label="Open menu"
-        >
-          <span class="block w-5">
-            <span class="block h-0.5 bg-[color:var(--form-navy)] mb-1.5"></span>
-            <span class="block h-0.5 bg-[color:var(--form-navy)] mb-1.5"></span>
-            <span class="block h-0.5 bg-[color:var(--form-navy)]"></span>
-          </span>
-          Menu
-        </summary>
-
-        <div class="absolute right-0 mt-3 w-[min(92vw,22rem)] bg-white border border-slate-200 rounded-2xl shadow-lg p-4">
-          <div class="flex flex-col gap-3 nav-bold uppercase tracking-wide text-[color:var(--form-navy)]">
-            <a class="no-underline hover:underline" href="#about">About</a>
-            <a class="no-underline hover:underline" href="#programs">What We Do</a>
-            <a class="no-underline hover:underline" href="#impact">Get Involved</a>
-            <a class="no-underline hover:underline" href="#stories">Stories</a>
-          </div>
-
-          <div class="mt-4 grid gap-3">
-            <a href={MAIL_PARTNER} class="btn-secondary w-full">Volunteer</a>
-            <a href="#donate" class="btn-primary w-full">Donate</a>
-            <a href={MAIL_SUPPORT} class="btn-secondary w-full">Get Support</a>
-          </div>
-        </div>
-      </details>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section id="top" class="relative overflow-hidden">
-    <div class="absolute inset-0">
-      <img
-        src="/hero.jpg"
-        alt="FORM connecting people to trusted local resources across Southern California"
-        class="h-full w-full object-cover"
-        loading="eager"
-      />
-      <div class="absolute inset-0 bg-[color:var(--form-navy)]/70"></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/40"></div>
-    </div>
-
-    <div class="relative">
-      <div class="max-w-6xl mx-auto px-5 py-14 sm:py-16 md:py-20 lg:py-24">
-        <div class="max-w-2xl">
-          <p class="text-sm nav-bold tracking-wide text-[color:var(--form-orange)] uppercase">
-            FORM • Southern California
-          </p>
-
-          <h1 class="mt-3 text-4xl sm:text-5xl md:text-6xl leading-tight text-white nav-bold uppercase">
-            Build the foundation. Claim the future.
-          </h1>
-
-          <p class="mt-5 text-base sm:text-lg text-white/90 leading-relaxed">
-            FORM advances stability by helping individuals navigate real-life challenges through connection to verified local resources across Southern California.
-          </p>
-
-          <div class="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <a href="#donate" class="btn-primary">Donate</a>
-            <a href={MAIL_SUPPORT} class="btn-secondary btn-secondary--on-dark">Get Support</a>
-            <a href={MAIL_PARTNER} class="btn-secondary btn-secondary--on-dark">Partner With Us</a>
-          </div>
-
-          <p class="mt-6 text-sm text-white/85">
-            Looking for resources now? <a class="nav-bold underline" href={MAIL_SUPPORT}>Start here</a>.
-          </p>
-        </div>
-      </div>
-
-      <!-- Impact strip -->
-      <div class="bg-white border-t border-slate-200">
-        <div class="max-w-6xl mx-auto px-5 py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
-          {stats.map((s) => (
-            <div class="text-center">
-              <div class="text-2xl md:text-3xl nav-bold text-[color:var(--form-navy)]">{s.value}</div>
-              <div class="mt-1 text-xs md:text-sm text-slate-600 nav-bold tracking-wide uppercase">{s.label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="py-14 sm:py-16 md:py-20 lg:py-24">
-    <div class="max-w-4xl mx-auto px-5">
-      <h2 class="text-3xl md:text-4xl nav-bold text-[color:var(--form-navy)] uppercase">About FORM</h2>
-
-      <p class="mt-5 text-lg text-slate-700">
-        F.O.R.M compiles and connects individuals to trusted, county-specific resources across Los Angeles, Orange, Riverside, and San Bernardino—making it easier to find real support, close to home.
-      </p>
-
-      <a
-        href="/about"
-        class="mt-6 inline-flex no-underline nav-bold tracking-wide uppercase text-[color:var(--form-orange)] hover:underline"
-      >
-        Learn more about FORM →
-      </a>
-    </div>
-  </section>
-
-  <!-- PROGRAMS -->
-  <section id="programs" class="py-14 sm:py-16 md:py-20 lg:py-24 bg-slate-50 border-t border-slate-200">
-    <div class="max-w-6xl mx-auto px-5">
-      <div class="flex items-end justify-between gap-6 flex-wrap">
-        <div>
-          <h2 class="text-3xl md:text-4xl nav-bold text-[color:var(--form-navy)] uppercase">What We Do</h2>
-          <p class="mt-3 text-slate-700 max-w-2xl">
-            We organize access to housing, education, employment, mental health, and stability services—supporting foster youth, justice-impacted individuals, people experiencing homelessness, and those in recovery.
-          </p>
-          <a
-            href="/what-we-do"
-            class="mt-5 inline-flex no-underline nav-bold tracking-wide uppercase text-[color:var(--form-orange)] hover:underline"
-          >
-            Explore what we do →
-          </a>
-        </div>
-      </div>
-
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
-        {programs.map((p) => (
-          <div class="bg-white border border-slate-200 rounded-3xl p-7 shadow-sm hover:shadow transition">
-            <div class="h-10 w-10 rounded-xl bg-[color:var(--form-orange)]/15 mb-4"></div>
-            <h3 class="text-xl nav-bold text-[color:var(--form-navy)]">{p.title}</h3>
-            <p class="mt-3 text-slate-700">{p.desc}</p>
-            <a
-              href="/what-we-do"
-              class="mt-5 inline-flex nav-bold tracking-wide uppercase text-[color:var(--form-orange)] no-underline hover:underline"
-            >
-              Learn more
-            </a>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- GET INVOLVED (SECTION + PARTNER CARD) -->
-  <section id="impact" class="py-14 sm:py-16 md:py-20 lg:py-24">
-    <div class="max-w-6xl mx-auto px-5 grid lg:grid-cols-12 gap-10 items-start">
-      <div class="lg:col-span-7">
-        <h2 class="text-3xl md:text-4xl nav-bold text-[color:var(--form-navy)] uppercase">Get Involved</h2>
-        <p class="mt-4 text-slate-700 max-w-2xl">
-          FORM partners with organizations and individuals who want to make trusted support easier to find and access across our region.
-        </p>
-
-        <div class="mt-8 grid sm:grid-cols-2 gap-4">
-          {[
-            "Housing & shelter support",
-            "Education & training programs",
-            "Employment & workforce services",
-            "Recovery, legal & wellness resources",
-          ].map((x) => (
-            <div class="rounded-2xl border border-slate-200 p-5">
-              <div class="text-sm nav-bold tracking-wide uppercase text-[color:var(--form-navy)]">{x}</div>
-              <div class="mt-2 text-sm text-slate-700">
-                Share your services so we can include your organization in our verified resource network.
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div class="lg:col-span-5">
-        <div class="rounded-3xl bg-[color:var(--form-navy)] p-8 shadow-sm">
-
-  <div class="text-sm nav-bold tracking-wide uppercase text-[color:var(--form-orange)]">
-    Partner with FORM
-  </div>
-
-  <p class="mt-3 text-lg nav-bold text-[color:var(--form-orange)]">
-    Your work matters — and we’d love to help make it more visible and accessible.
-  </p>
-
-  <p class="mt-4 text-white/80 text-sm">
-    Are you an organization providing housing, education, employment, recovery, legal, or wellness support?
-    Reach out to share your services so we can help connect individuals to your trusted resources.
-  </p>
-
-  <p class="mt-3 text-white/80 text-sm">
-    Together, we can make it easier for people to find the support that already exists in their communities.
-  </p>
-
-  <a href={MAIL_PARTNER} class="btn-secondary btn-secondary--on-dark mt-6">
-    Get Involved
-  </a>
-
 </div>
 
-          <p class="mt-3 text-white/80 text-sm">
-            Together, we can make it easier for people to find the support that already exists in their communities.
-          </p>
+<!-- HERO -->
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="/hero.jpg" class="h-full w-full object-cover" />
+    <div class="absolute inset-0 bg-[color:var(--form-navy)]/70"></div>
+  </div>
 
-          <a href={MAIL_PARTNER} class="btn-secondary btn-secondary--on-dark mt-6">
-            Get Involved
-          </a>
-        </div>
-      </div>
+  <div class="relative max-w-6xl mx-auto px-5 py-20">
+    <h1 class="text-5xl text-white nav-bold uppercase">
+      Build the foundation. Claim the future.
+    </h1>
+
+    <p class="mt-5 text-lg text-white/90">
+      FORM advances stability by helping individuals navigate real-life challenges through connection to verified local resources across Southern California.
+    </p>
+
+    <div class="mt-8 flex gap-4">
+      <a href={MAIL_SUPPORT} class="btn-secondary btn-secondary--on-dark">Get Support</a>
+      <a href={MAIL_PARTNER} class="btn-secondary btn-secondary--on-dark">Partner With Us</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- STORIES -->
-  <section id="stories" class="py-14 sm:py-16 md:py-20 lg:py-24 bg-slate-50 border-t border-slate-200">
-    <div class="max-w-6xl mx-auto px-5">
-      <h2 class="text-3xl md:text-4xl nav-bold text-[color:var(--form-navy)] uppercase">Stories & Updates</h2>
-      <p class="mt-3 text-slate-700 max-w-2xl">
-        Highlights from community partners and the support network we’re building.
+<!-- ABOUT -->
+<section id="about" class="py-20">
+  <div class="max-w-4xl mx-auto px-5">
+    <h2 class="text-4xl nav-bold text-[color:var(--form-navy)] uppercase">About FORM</h2>
+
+    <p class="mt-5 text-lg text-slate-700">
+      F.O.R.M compiles and connects individuals to trusted, county-specific resources across Los Angeles, Orange, Riverside, and San Bernardino—making it easier to find real support, close to home.
+    </p>
+
+    <a href="/about" class="mt-6 inline-flex nav-bold text-[color:var(--form-orange)]">
+      Learn more about FORM →
+    </a>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="py-20 bg-slate-50">
+  <div class="max-w-6xl mx-auto px-5">
+    <h2 class="text-4xl nav-bold text-[color:var(--form-navy)] uppercase">What We Do</h2>
+
+    <p class="mt-3 text-slate-700 max-w-2xl">
+      We organize access to housing, education, employment, mental health, and stability services—supporting foster youth, justice-impacted individuals, people experiencing homelessness, and those in recovery.
+    </p>
+
+    <a href="/what-we-do" class="mt-5 inline-flex nav-bold text-[color:var(--form-orange)]">
+      Explore what we do →
+    </a>
+  </div>
+</section>
+
+<!-- GET INVOLVED SECTION -->
+<section class="py-20">
+  <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-10">
+
+    <!-- LEFT -->
+    <div>
+      <h2 class="text-4xl nav-bold text-[color:var(--form-navy)] uppercase">Get Involved</h2>
+
+      <p class="mt-4 text-slate-700">
+        FORM partners with organizations and individuals who want to make trusted support easier to find and access across our region.
+      </p>
+    </div>
+
+    <!-- RIGHT CARD -->
+    <div class="rounded-3xl bg-[color:var(--form-navy)] p-8 shadow-sm">
+
+      <div class="text-sm nav-bold uppercase text-[color:var(--form-orange)]">
+        Partner with FORM
+      </div>
+
+      <p class="mt-3 text-lg nav-bold text-[color:var(--form-orange)]">
+        Your work matters — and we’d love to help make it more visible and accessible.
       </p>
 
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
-        {stories.map((s) => (
-          <div class="bg-white border border-slate-200 rounded-3xl p-7 shadow-sm hover:shadow transition">
-            <div class="text-xs nav-bold tracking-wide text-[color:var(--form-orange)] uppercase">{s.tag}</div>
-            <div class="mt-2 text-lg nav-bold text-[color:var(--form-navy)]">{s.title}</div>
-            <p class="mt-3 text-slate-700">{s.desc}</p>
-            <a
-              class="mt-5 inline-flex no-underline nav-bold tracking-wide uppercase text-[color:var(--form-navy)] hover:underline"
-              href={MAIL_PARTNER}
-            >
-              Get involved
-            </a>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+      <p class="mt-4 text-white/80 text-sm">
+        Are you an organization providing housing, education, employment, recovery, legal, or wellness support?
+        Reach out to share your services so we can help connect individuals to your trusted resources.
+      </p>
 
-  <!-- GET SUPPORT -->
-  <section id="get-support" class="py-14 sm:py-16 md:py-20 lg:py-24">
-    <div class="max-w-6xl mx-auto px-5">
-      <div class="rounded-3xl border border-slate-200 bg-white p-8 md:p-10 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-        <div>
-          <h2 class="text-2xl md:text-3xl nav-bold text-[color:var(--form-navy)] uppercase">Need support?</h2>
-          <p class="mt-3 text-slate-700 max-w-2xl">
-            If you’re looking for resources, start here. We’ll help you identify options and next steps.
-          </p>
-        </div>
-        <a href={MAIL_SUPPORT} class="btn-primary">Get Support</a>
-      </div>
-    </div>
-  </section>
+      <p class="mt-3 text-white/80 text-sm">
+        Together, we can make it easier for people to find the support that already exists in their communities.
+      </p>
 
-  <!-- GET INVOLVED (BOTTOM BAND) -->
-  <section id="get-involved" class="py-14 sm:py-16 md:py-20 lg:py-24 bg-[color:var(--form-navy)] text-white">
-    <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-10 items-center">
+      <a href={MAIL_PARTNER} class="btn-secondary btn-secondary--on-dark mt-6">
+        Get Involved
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- GET SUPPORT -->
+<section class="py-20">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm flex justify-between items-center">
       <div>
-        <h2 class="text-3xl md:text-4xl nav-bold text-white uppercase">Get Involved</h2>
-        <p class="mt-4 text-white/80 max-w-xl">
-          FORM partners with individuals, organizations, and institutions committed to expanding access to trusted resources and strengthening stability across Southern California.
+        <h2 class="text-3xl nav-bold text-[color:var(--form-navy)] uppercase">Need support?</h2>
+        <p class="mt-2 text-slate-700">
+          If you're looking for resources, start here.
         </p>
       </div>
 
-      <div class="flex flex-col sm:flex-row gap-3 sm:justify-end">
-        <a id="donate" href="#donate" class="btn-primary">Make a Donation</a>
-        <a href={MAIL_PARTNER} class="btn-secondary btn-secondary--on-dark">Get Involved</a>
-      </div>
+      <a href={MAIL_SUPPORT} class="btn-primary">
+        Get Support
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="border-t border-slate-200 py-10">
-    <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-3 gap-8 text-sm">
-      <div>
-        <div class="nav-bold text-[color:var(--form-navy)] uppercase">FORM</div>
-        <div class="mt-1 text-xs uppercase tracking-wide text-slate-600 nav-bold">
-          Foundation • Opportunity • Resources • Mentorship
-        </div>
-        <p class="mt-3 text-slate-700">Build the foundation. Claim the future.</p>
-      </div>
+<!-- FOOTER -->
+<footer class="border-t py-10">
+  <div class="max-w-6xl mx-auto px-5 text-sm">
+    <div class="nav-bold text-[color:var(--form-navy)] uppercase">FORM</div>
+    <p class="mt-3 text-slate-700">Build the foundation. Claim the future.</p>
 
-      <div>
-        <div class="nav-bold text-[color:var(--form-navy)] uppercase">Contact</div>
-        <p class="mt-3 text-slate-700">
-          Email: <a href={`mailto:${EMAIL}`} class="hover:underline">{EMAIL}</a>
-        </p>
-        <p class="text-slate-700">Southern California</p>
-      </div>
+    <p class="mt-3 text-slate-700">
+      Email:
+      <a href={`mailto:${EMAIL}`} class="hover:underline">
+        {EMAIL}
+      </a>
+    </p>
+  </div>
+</footer>
 
-      <div>
-        <div class="nav-bold text-[color:var(--form-navy)] uppercase">Links</div>
-        <div class="mt-3 flex flex-col gap-2">
-          <a class="no-underline hover:underline text-slate-700" href="#donate">Donate</a>
-          <a class="no-underline hover:underline text-slate-700" href={MAIL_SUPPORT}>Get Support</a>
-          <a class="no-underline hover:underline text-slate-700" href={MAIL_PARTNER}>Get Involved</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="max-w-6xl mx-auto px-5 mt-10 text-xs text-slate-500">
-      © {new Date().getFullYear()} FORM — Foundation • Opportunity • Resources • Mentorship
-    </div>
-  </footer>
 </SiteLayout>
