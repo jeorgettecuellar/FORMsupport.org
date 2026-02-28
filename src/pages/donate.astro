@@ -1,0 +1,48 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+
+// OPTIONAL: If you prefer using the direct link instead of embed,
+// you can also paste your Zeffy form URL here and use it in a button.
+const ZEFFY_FORM_URL = "PASTE_YOUR_ZEFFY_FORM_URL_HERE";
+---
+
+<SiteLayout title="Donate to FORM">
+  <section class="py-14 sm:py-16 md:py-20 lg:py-24">
+    <div class="max-w-6xl mx-auto px-5 grid lg:grid-cols-12 gap-10 items-start">
+      <!-- Left: page copy -->
+      <div class="lg:col-span-5">
+        <h1 class="text-3xl md:text-4xl nav-bold text-[color:var(--form-navy)] uppercase">Donate</h1>
+        <p class="mt-4 text-slate-700">
+          Your donation helps FORM connect people to verified local support across Los Angeles, Orange, Riverside, and San Bernardino counties.
+        </p>
+
+        <div class="mt-6 rounded-2xl border border-slate-200 p-5 bg-white">
+          <div class="text-sm nav-bold tracking-wide uppercase text-[color:var(--form-navy)]">Note</div>
+          <p class="mt-2 text-sm text-slate-700">
+            Payments are processed securely through Zeffy. You’ll receive a confirmation email after donating.
+          </p>
+        </div>
+
+        <!-- Optional direct-link button if you want it -->
+        <a
+          href={ZEFFY_FORM_URL}
+          class="mt-6 inline-flex btn-secondary"
+          style="display:inline-flex"
+        >
+          Open donation form
+        </a>
+      </div>
+
+      <!-- Right: embedded Zeffy form -->
+      <div class="lg:col-span-7">
+        <div class="rounded-3xl border border-slate-200 bg-white p-3 md:p-4 shadow-sm">
+          <!--
+            Paste the Zeffy "Embed on your website" HTML here.
+            Zeffy provides an iframe-based embed. :contentReference[oaicite:2]{index=2}
+          -->
+          PASTE_YOUR_ZEFFY_EMBED_CODE_HERE
+        </div>
+      </div>
+    </div>
+  </section>
+</SiteLayout>
